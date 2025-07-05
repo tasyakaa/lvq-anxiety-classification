@@ -4,7 +4,7 @@ This repository contains the implementation of the Learning Vector Quantization 
 
 ## 📊 Dataset
 
-- Source: [Kaggle - Human Stress Detection Dataset](https://www.kaggle.com/datasets)
+- Source: [Kaggle - Human Stress Detection Dataset](https://www.kaggle.com/datasets/laavanya/stress-level-detection?resource=download)
 - Filename: `Stress-Lysis.csv`
 - Size: 2001 samples
 - Features:
