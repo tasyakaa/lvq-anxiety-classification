@@ -10,9 +10,6 @@ This project implements a machine learning pipeline to classify anxiety levels u
 - [Dataset](#dataset)
 - [Methodology](#methodology)
 - [Technologies Used](#technologies-used)
-- [How to Run](#how-to-run)
-- [Results](#results)
-- [Future Improvements](#future-improvements)
 
 ---
 
@@ -24,7 +21,7 @@ Mental health has become a global concern in recent years. Physiological data fr
 
 ## 📊 Dataset
 
-- **Source**: [Kaggle - Human Stress Detection Dataset](https://www.kaggle.com/datasets)
+- **Source**: [Kaggle - Human Stress Detection Dataset](https://www.kaggle.com/datasets/laavanya/stress-level-detection?resource=download)
 - **Name**: `Stress-Lysis.csv`
 - **Size**: 2001 samples
 - **Features**:
