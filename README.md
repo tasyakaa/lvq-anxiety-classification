@@ -1,72 +1,45 @@
 # Anxiety Level Classification Using LVQ and Wearable Data
 
-This project implements a machine learning pipeline to classify anxiety levels using the Learning Vector Quantization (LVQ) algorithm based on physiological data from wearable devices. The model is designed to categorize stress into three classes: **Low**, **Normal**, and **High**, with a maximum accuracy of **95.26%**.
-
----
-
-## 📌 Table of Contents
-
-- [Overview](#overview)
-- [Dataset](#dataset)
-- [Methodology](#methodology)
-- [Technologies Used](#technologies-used)
-
----
-
-## 📘 Overview
-
-Mental health has become a global concern in recent years. Physiological data from wearable devices like smartwatches and fitness trackers offers great potential in supporting real-time monitoring and early detection of stress and anxiety. This project utilizes LVQ (Learning Vector Quantization), a prototype-based supervised learning algorithm, to classify anxiety levels based on body humidity, temperature, and step count.
-
----
+This repository contains the implementation of the Learning Vector Quantization (LVQ) algorithm to classify anxiety levels based on physiological data collected from wearable devices. The dataset is preprocessed, trained, and evaluated using various configurations such as learning rate, decay factor, and training data size.
 
 ## 📊 Dataset
 
-- **Source**: [Kaggle - Human Stress Detection Dataset](https://www.kaggle.com/datasets/laavanya/stress-level-detection?resource=download)
-- **Name**: `Stress-Lysis.csv`
-- **Size**: 2001 samples
-- **Features**:
-  - `Humidity` (10% – 30%)
-  - `Temperature` (79°F – 99°F)
-  - `Step_count` (0 – 200)
-- **Label**: `Stress_Level` (0 = Low, 1 = Normal, 2 = High)
+- Source: [Kaggle - Human Stress Detection Dataset](https://www.kaggle.com/datasets)
+- Filename: `Stress-Lysis.csv`
+- Size: 2001 samples
+- Features:
+  - `Humidity` (10–30%)
+  - `Temperature` (79–99°F)
+  - `Step_count` (0–200)
+- Target: `Stress_Level` (0 = Low, 1 = Normal, 2 = High)
 
----
+## ⚙️ Project Structure
 
-## 🧠 Methodology
+- `lvq-anxiety-classification.ipynb`: Main Jupyter Notebook containing:
+  - Data preprocessing
+  - LVQ class implementation
+  - Accuracy calculation
+  - Parameter experiments (learning rate, decay factor, training size)
+  - Cross-validation
+  - Visualization of prediction results
 
-1. **Data Preprocessing**:
-   - Normalization using `MinMaxScaler`
-   - Label encoding using `LabelEncoder`
-   - Train-Test Split (80%-20%)
+## 🧠 Algorithm
 
-2. **Model Implementation**:
-   - Custom implementation of the LVQ algorithm
-   - Training with adjustable parameters:
-     - `learning_rate`
-     - `decay_factor`
-     - `max_epochs`
+The project uses a custom implementation of the **Learning Vector Quantization (LVQ)** algorithm, trained and tested on normalized physiological data. The LVQ model uses Euclidean distance to find the closest class prototype and iteratively updates weights based on prediction correctness.
 
-3. **Evaluation Metrics**:
-   - Accuracy
-   - Comparison of predicted vs actual stress levels
-   - Correlation analysis and feature impact
+## 🧪 Experiments
 
-4. **Experiments**:
-   - Effect of learning rate
-   - Effect of decay factor
-   - Impact of training data size
-   - Cross-validation
+- **Learning Rate Sensitivity**: Evaluates accuracy across different learning rates from 0.1 to 1.0.
+- **Decay Factor Impact**: Tests how decay in learning rate affects convergence and performance.
+- **Training Size Variations**: Measures model accuracy using training data from 10% to 80%.
+- **Cross Validation**: 3-fold evaluation to assess model generalization.
 
----
-
-## 🛠 Technologies Used
-
-| Tool/Library     | Purpose                           |
-|------------------|-----------------------------------|
-| Python 3.11      | Programming language              |
-| NumPy            | Numerical computation             |
-| Pandas           | Data manipulation                 |
-| Matplotlib       | Data visualization                |
-| Seaborn          | Statistical plots                 |
-| Scikit-learn     | Preprocessing and utilities       |
-| Jupyter Notebook | Interactive development           |
+## 🛠️ Technologies
+- Python 3.11
+- Jupyter Notebook / VS Code
+- Libraries:
+    - NumPy
+    - Pandas
+    - Matplotlib
+    - Seaborn
+    - Scikit-learn
